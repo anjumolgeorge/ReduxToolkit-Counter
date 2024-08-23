@@ -2,7 +2,8 @@ import {createSlice} from "@reduxjs/toolkit"
 
 
 const initialState = {
-    count1 : 0
+    count1 : 0, 
+    count2 : 10
 }
 
 
@@ -15,8 +16,14 @@ const counterSlice = createSlice({
         },
         Decrement :(state) => {
             state.count1 = state.count1 - 1
+        }, 
+        Incrementby5 : (state) => {
+            state.count2 = state.count2 + 5
         }
     }
 })
 export default counterSlice.reducer
-export const {Increment,Decrement} = counterSlice.actions
+export const {Increment,Decrement,Incrementby5} = counterSlice.actions
+
+
+
